@@ -19,7 +19,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Copy Apache configuration
-COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY backend_railway/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
