@@ -1,5 +1,6 @@
 <?php
 // backend_railway/AddPost.php
+require_once 'cors.php'; // Hoặc đường dẫn tương đối đúng nếu bạn đã sắp xếp thư mục
 
 require_once 'Database.php'; 
 
