@@ -1,5 +1,6 @@
 <?php
 // backend_railway/GetUsers.php
+require_once 'cors.php'; // Hoặc đường dẫn tương đối đúng nếu bạn đã sắp xếp thư mục
 
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *'); // Cho phép CORS

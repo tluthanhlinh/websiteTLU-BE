@@ -1,5 +1,6 @@
 <?php
 // backend_railway/GetSinglePost.php
+require_once 'cors.php'; // Hoặc đường dẫn tương đối đúng nếu bạn đã sắp xếp thư mục
 
 // Bao gồm file cấu hình database để thiết lập kết nối và CORS headers
 require_once 'Database.php'; 
