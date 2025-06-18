@@ -1,8 +1,13 @@
 # Base image for PHP applications
 FROM php:8.2-apache 
 
+# Install system dependencies for PostgreSQL PHP extension
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install PHP extensions required for PostgreSQL
-RUN docker-php-ext-install pdo pdo_pgsql pgsql # <--- DÒNG NÀY CẦN THÊM VÀO ĐÂY
+RUN docker-php-ext-install pdo pdo_pgsql pgsql
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
