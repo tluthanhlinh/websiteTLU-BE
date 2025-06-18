@@ -1,6 +1,6 @@
 <?php
 // backend_railway/UpdateUserRole.php
-
+require_once 'cors.php';
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *'); 
 header('Access-Control-Allow-Methods: POST, OPTIONS');

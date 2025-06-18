@@ -1,6 +1,6 @@
 <?php
 // backend_railway/config/Database.php (theo cấu trúc mới)
-
+require_once 'cors.php';
 // Bước 1: Tải các biến môi trường từ file .env (nếu chạy cục bộ)
 if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
     require_once __DIR__ . '/../vendor/autoload.php';
