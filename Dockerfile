@@ -10,8 +10,14 @@ WORKDIR /var/www/html
 # Copy your application files
 COPY . .
 
+# Copy Apache configuration
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
+
+# Enable Apache rewrite module if needed (for clean URLs)
+# RUN a2enmod rewrite
 
 # Expose port 80 for Apache
 EXPOSE 80
